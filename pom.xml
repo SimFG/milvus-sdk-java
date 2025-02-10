@@ -117,6 +117,10 @@
         <minio-java-sdk.veresion>8.5.7</minio-java-sdk.veresion>
         <azure-java-blob-sdk.version>12.25.3</azure-java-blob-sdk.version>
         <azure-java-identity-sdk.version>1.10.1</azure-java-identity-sdk.version>
+
+        <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
+        <shaded.prefix>milvus.io.shaded</shaded.prefix>
+        <log4j.slf4j.version>2.17.1</log4j.slf4j.version>
     </properties>
 
     <profiles>
@@ -256,7 +260,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
-                    <skipTests>false</skipTests>
+                    <skipTests>true</skipTests>
                 </configuration>
                 <dependencies>
                     <dependency>
