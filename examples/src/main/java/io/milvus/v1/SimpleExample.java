@@ -43,8 +43,10 @@ public class SimpleExample {
     public static void main(String[] args) {
         // Connect to Milvus server. Replace the "localhost" and port with your Milvus server address.
         MilvusServiceClient milvusClient = new MilvusServiceClient(ConnectParam.newBuilder()
-                .withHost("localhost")
-                .withPort(19530)
+                // .withHost("localhost")
+                // .withPort(19530)
+                .withUri("https://in01-1479b85614880b2.aws-us-west-2.vectordb-uat3.zillizcloud.com:19537")
+                .withToken("root:n7}y3XJb4<oxMORqRU!!TMn1swDK4[]Q")
                 .build());
 
         // set log level, only show errors
